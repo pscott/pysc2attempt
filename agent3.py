@@ -44,4 +44,5 @@ class Agent3(base_aget.BaseAgent):
             player_relative = obs.observation.feature_screen.player_relative
             beacon = _xy_locs(player_relative == _PLAYER_NEUTRAL)
             beacon_center = np.mean(beacon, axis=0).round()
+            func = actions.FUNCTIONS.Move_screen("now", beacon_center)
             
